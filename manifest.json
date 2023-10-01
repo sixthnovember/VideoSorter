@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Watch Later Sorter",
+    "version": "1.0",
+    "description": "Sorts videos by length",
+    "content_scripts": [
+        {
+            "matches": ["*://www.youtube.com/playlist?list=WL*"],
+            "js": ["sorter.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+          "resources": ["sorter.js"],
+          "matches": ["*://www.youtube.com/playlist?list=WL*"]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage"
+    ]
+}  
